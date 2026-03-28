@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background rounded rectangle -->
+  <rect width="800" height="450" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Image/photo icon: mountain-and-sun motif, centered at (400, 195) ~60x60 -->
+  <g transform="translate(370, 165)" stroke="#94a3b8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Icon frame -->
+    <rect x="0" y="0" width="60" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8"/>
+    <!-- Sun circle -->
+    <circle cx="18" cy="18" r="7" fill="#cbd5e1" stroke="#94a3b8"/>
+    <!-- Mountain peaks -->
+    <polyline points="0,60 22,32 38,48 50,36 60,60" fill="#cbd5e1" stroke="#94a3b8"/>
+  </g>
+
+  <!-- Primary label -->
+  <text x="400" y="264" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#64748b" text-anchor="middle" font-weight="500">Sample Screenshot</text>
+
+  <!-- Sub-label -->
+  <text x="400" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Replace with real image URL before publishing</text>
+</svg>
+

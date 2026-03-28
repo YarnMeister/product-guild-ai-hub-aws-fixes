@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "detectedAt": "2026-03-17T08:31:43.183Z",
+  "packageManager": "npm",
+  "manifestHash": "ae9b3562146479f2135bc531db1c224c3e0dd172f3ed1816dcac034ba6959cda",
+  "scripts": [
+    {
+      "name": "dev",
+      "command": "npm run dev",
+      "category": "dev",
+      "mode": "service"
+    },
+    {
+      "name": "dev:api",
+      "command": "npm run dev:api",
+      "category": "dev",
+      "mode": "service"
+    },
+    {
+      "name": "dev:vite",
+      "command": "npm run dev:vite",
+      "category": "dev",
+      "mode": "service"
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "category": "build",
+      "mode": "command"
+    },
+    {
+      "name": "build:dev",
+      "command": "npm run build:dev",
+      "category": "build",
+      "mode": "command"
+    },
+    {
+      "name": "prebuild",
+      "command": "npm run prebuild",
+      "category": "build",
+      "mode": "command"
+    },
+    {
+      "name": "validate-directives",
+      "command": "npm run validate-directives",
+      "category": "other",
+      "mode": "command"
+    },
+    {
+      "name": "generate-content-index",
+      "command": "npm run generate-content-index",
+      "category": "other",
+      "mode": "command"
+    },
+    {
+      "name": "lint",
+      "command": "npm run lint",
+      "category": "lint",
+      "mode": "command"
+    },
+    {
+      "name": "preview",
+      "command": "npm run preview",
+      "category": "dev",
+      "mode": "service"
+    },
+    {
+      "name": "test",
+      "command": "npm run test",
+      "category": "test",
+      "mode": "command"
+    },
+    {
+      "name": "test:watch",
+      "command": "npm run test:watch",
+      "category": "test",
+      "mode": "command"
+    },
+    {
+      "name": "db:migrate",
+      "command": "npm run db:migrate",
+      "category": "other",
+      "mode": "command"
+    },
+    {
+      "name": "db:sync",
+      "command": "npm run db:sync",
+      "category": "other",
+      "mode": "command"
+    },
+    {
+      "name": "db:seed",
+      "command": "npm run db:seed",
+      "category": "other",
+      "mode": "command"
+    },
+    {
+      "name": "db:seed-test",
+      "command": "npm run db:seed-test",
+      "category": "test",
+      "mode": "command"
+    }
+  ]
+}

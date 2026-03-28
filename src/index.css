@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Hub Design System
+   Science-inspired palette: Navy primary, Amber accents
+   8px spacing grid, 12px card radius
+*/
+
+@layer base {
+  :root {
+    /* Core backgrounds */
+    --background: 220 20% 97%;
+    --foreground: 224 71% 15%;
+
+    /* Cards & elevated surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 15%;
+
+    /* Popovers & dropdowns */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 15%;
+
+    /* Primary: Navy Blue (#1e3a8a) */
+    --primary: 224 76% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light navy tint */
+    --secondary: 220 30% 92%;
+    --secondary-foreground: 224 76% 33%;
+
+    /* Muted: Soft gray-blue */
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 45%;
+
+    /* Accent: Amber/Yellow-Orange (#f59e0b) */
+    --accent: 38 92% 50%;
+    --accent-foreground: 224 71% 15%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & inputs */
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 224 76% 33%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Custom tokens for AI Hub */
+    --rank-wannabe: 220 15% 45%;
+    --rank-apprentice: 199 89% 48%;
+    --rank-practitioner: 142 76% 36%;
+    --rank-researcher: 271 81% 56%;
+    --rank-scientist: 38 92% 50%;
+
+    /* Badge difficulties */
+    --badge-easy: 142 76% 36%;
+    --badge-medium: 38 92% 50%;
+    --badge-hard: 0 84% 60%;
+
+    /* Experimentation lifecycle phases */
+    --phase-research: 204 70% 53%;
+    --phase-hypothesis: 33 90% 55%;
+    --phase-experimentation: 271 60% 45%;
+    --phase-evaluation: 142 60% 42%;
+
+    /* Learning track colors */
+    --track-prototyping: 263 70% 58%;
+    --track-ai-workbench: 217 91% 60%;
+    --track-productivity: 160 84% 39%;
+    --track-hosting: 38 92% 50%;
+    --track-measurement: 347 77% 55%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(224 71% 15% / 0.05);
+    --shadow-md: 0 4px 12px -1px hsl(224 71% 15% / 0.08);
+    --shadow-lg: 0 8px 24px -4px hsl(224 71% 15% / 0.1);
+    --shadow-glow: 0 0 20px hsl(38 92% 50% / 0.3);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 224 71% 15%;
+    --sidebar-primary: 224 76% 33%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 92%;
+    --sidebar-accent-foreground: 224 76% 33%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 224 76% 33%;
+  }
+
+  .dark {
+    --background: 224 71% 8%;
+    --foreground: 220 20% 95%;
+
+    --card: 224 50% 12%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 224 50% 12%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 224 71% 8%;
+
+    --secondary: 224 50% 18%;
+    --secondary-foreground: 220 20% 95%;
+
+    --muted: 224 50% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 224 71% 8%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 50% 20%;
+    --input: 224 50% 20%;
+    --ring: 38 92% 50%;
+
+    --sidebar-background: 224 50% 10%;
+    --sidebar-foreground: 220 20% 95%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 224 71% 8%;
+    --sidebar-accent: 224 50% 18%;
+    --sidebar-accent-foreground: 220 20% 95%;
+    --sidebar-border: 224 50% 20%;
+    --sidebar-ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Vanta.js background gradient fallback (shows while loading or if scripts fail) */
+  .vanta-loading-bg {
+    background: linear-gradient(to bottom right, var(--background), var(--background), hsl(var(--secondary) / 0.3));
+  }
+}

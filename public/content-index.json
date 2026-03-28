@@ -1,0 +1,783 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Use Figma Make to Build Interactive Prototypes Within Minutes",
+      "description": "Learn how to use Figma Make's AI-powered features to generate, iterate, and share real working prototypes in minutes — from blank canvas to branded, multi-screen app.",
+      "estimatedTime": "45 mins",
+      "order": 1,
+      "type": "lesson",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "badgeName": "Prototype Maker",
+      "unlockMessage": "You've unlocked: Prototype Maker!",
+      "contentPath": "/content/ai-driven-experimentation/lessons/01-prototyping-with-figma.md",
+      "track": "prototyping",
+      "status": "live",
+      "estimatedMinutes": 45,
+      "toolTags": [
+        "figma",
+        "figma-ai",
+        "miro",
+        "omnia"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.8,
+        "completionist": 0.9,
+        "pragmatist": 1
+      },
+      "trackPrereqs": [],
+      "approval": "REA Approved"
+    },
+    {
+      "id": 2,
+      "title": "AI Workbench",
+      "description": "Set up your AI-assisted development environment with VS Code, GitHub Copilot, and Cline to supercharge your coding workflow.",
+      "estimatedTime": "1 hour",
+      "unlocksRank": 2,
+      "order": 2,
+      "type": "lesson",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "badgeName": "AI Collaborator",
+      "unlockMessage": "You've unlocked Rank 2: AI Collaborator!",
+      "contentPath": "/content/ai-driven-experimentation/lessons/02-ai-workbench.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "vs-code",
+        "copilot",
+        "github-copilot"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.7,
+        "completionist": 1,
+        "pragmatist": 0.9
+      },
+      "trackPrereqs": [],
+      "approval": "REA Approved"
+    },
+    {
+      "id": 3,
+      "title": "Hosting and Deployment",
+      "description": "Deploy your AI prototypes to production-ready cloud platforms including Vercel, AWS, and Google Cloud Platform.",
+      "estimatedTime": "1 hour",
+      "unlocksRank": 4,
+      "order": 3,
+      "type": "lesson",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "badgeName": "AI Builder",
+      "unlockMessage": "You've unlocked Rank 4: AI Builder!",
+      "contentPath": "/content/ai-driven-experimentation/lessons/03-hosting-and-deployment.md",
+      "track": "hosting",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "aws",
+        "gcp",
+        "firebase-hosting"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.7,
+        "explorer": 0.7,
+        "completionist": 1,
+        "pragmatist": 0.8
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": 4,
+      "title": "AI Evaluations",
+      "description": "Measure and evaluate AI system performance using Arize to build confidence in your AI-assisted workflows.",
+      "estimatedTime": "1 hour",
+      "unlocksRank": 5,
+      "order": 4,
+      "type": "lesson",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "badgeName": "AI Architect",
+      "unlockMessage": "You've unlocked Rank 5: AI Architect!",
+      "contentPath": "/content/ai-driven-experimentation/lessons/04-ai-evaluations.md",
+      "track": "measurement",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "arize"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.5,
+        "explorer": 0.7,
+        "completionist": 1,
+        "pragmatist": 0.6
+      },
+      "trackPrereqs": [
+        "hosting"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": 5,
+      "title": "MCP Connections",
+      "description": "Connect your AI tools to enterprise systems via the Model Context Protocol — integrating Glean, Miro, and Atlassian into your AI IDE.",
+      "estimatedTime": "1 hour",
+      "unlocksRank": 3,
+      "order": 5,
+      "type": "lesson",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "badgeName": "AI Integrator",
+      "unlockMessage": "You've unlocked Rank 3: AI Integrator!",
+      "contentPath": "/content/ai-driven-experimentation/lessons/05-mcp-connections.md",
+      "track": "productivity",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "mcp",
+        "mcp-glean",
+        "mcp-miro",
+        "mcp-atlassian"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.8,
+        "explorer": 0.8,
+        "completionist": 1,
+        "pragmatist": 0.8
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "canvas-template",
+      "title": "AI Canvas Template",
+      "description": "Frame a problem using the AI canvas template and generate structured AI output — turning vague ideas into actionable experiments.",
+      "badgeName": "Canvas Thinker",
+      "badgeStatement": "I can frame any problem with the AI canvas template and generate structured AI output",
+      "difficulty": 1,
+      "estimatedTime": "20 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/canvas-template.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 20,
+      "toolTags": [
+        "mcp",
+        "ai-prompting"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.7,
+        "explorer": 0.7,
+        "completionist": 0.8,
+        "pragmatist": 0.9
+      },
+      "trackPrereqs": [],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "prove-glean",
+      "title": "Prove You Use Glean",
+      "description": "On-ramp challenge: demonstrate that you actively use Glean for enterprise search and share a concrete example of AI-assisted knowledge retrieval.",
+      "badgeName": "Glean User",
+      "badgeStatement": "I use Glean to find and act on enterprise knowledge with AI assistance",
+      "difficulty": 1,
+      "estimatedTime": "15 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/prove-glean.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 15,
+      "toolTags": [
+        "glean"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.6,
+        "explorer": 0.8,
+        "completionist": 0.7,
+        "pragmatist": 0.9
+      },
+      "trackPrereqs": [],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "prove-omnia",
+      "title": "Prove You Use Omnia",
+      "description": "On-ramp challenge: demonstrate that you actively use Omnia in your daily workflow and share a concrete example.",
+      "badgeName": "Omnia User",
+      "badgeStatement": "I use Omnia as part of my everyday AI-assisted workflow",
+      "difficulty": 1,
+      "estimatedTime": "15 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/prove-omnia.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 15,
+      "toolTags": [
+        "omnia"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.6,
+        "explorer": 0.8,
+        "completionist": 0.7,
+        "pragmatist": 0.9
+      },
+      "trackPrereqs": [],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "voicemode",
+      "title": "VoiceMode",
+      "description": "Dictate and converse with your AI IDE using VoiceMode — hands-free coding and prompting by voice.",
+      "badgeName": "Voice Coder",
+      "badgeStatement": "I can dictate code and converse with my AI IDE hands-free using VoiceMode",
+      "difficulty": 1,
+      "estimatedTime": "20 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/voicemode.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 20,
+      "toolTags": [
+        "voicemode"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.8,
+        "explorer": 0.6,
+        "completionist": 0.7,
+        "pragmatist": 0.8
+      },
+      "trackPrereqs": [],
+      "approval": "REA Tolerated"
+    },
+    {
+      "id": "vscode-copilot-setup",
+      "title": "VS Code + Copilot Setup",
+      "description": "Install, configure, and use GitHub Copilot in VS Code for the first time — your foundation for AI-assisted development.",
+      "badgeName": "Copilot Ready",
+      "badgeStatement": "I have GitHub Copilot configured in VS Code and have completed my first AI-assisted coding session",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Target",
+      "category": "Precision",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "contentPath": "/content/ai-driven-experimentation/challenges/vscode-copilot-setup.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "vs-code",
+        "copilot",
+        "github-copilot"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.6,
+        "completionist": 0.8,
+        "pragmatist": 0.8
+      },
+      "trackPrereqs": [],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "claude-code",
+      "title": "Claude Code",
+      "description": "Terminal-first agentic coding with Claude Code — let Claude read your codebase, write code, and run commands to ship a complete feature.",
+      "badgeName": "Claude Coder",
+      "badgeStatement": "I can use Claude Code in the terminal to ship a complete feature with agentic AI assistance",
+      "difficulty": 2,
+      "estimatedTime": "60 mins",
+      "requiredRank": 0,
+      "icon": "Target",
+      "category": "Precision",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/claude-code.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "claude-code"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.5,
+        "completionist": 0.8,
+        "pragmatist": 0.6
+      },
+      "trackPrereqs": [],
+      "approval": "External"
+    },
+    {
+      "id": "cline-agent",
+      "title": "Cline Agent",
+      "description": "Use Cline inside VS Code for agentic coding — automate a real task end-to-end with an AI agent that reads, writes, and runs your code.",
+      "badgeName": "Cline Agent",
+      "badgeStatement": "I can use Cline to automate a real development task end-to-end inside VS Code",
+      "difficulty": 2,
+      "estimatedTime": "45 mins",
+      "requiredRank": 0,
+      "icon": "Target",
+      "category": "Precision",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/cline-agent.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 45,
+      "toolTags": [
+        "cline",
+        "vs-code"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.5,
+        "completionist": 0.8,
+        "pragmatist": 0.6
+      },
+      "trackPrereqs": [],
+      "approval": "REA Tolerated"
+    },
+    {
+      "id": "openclaw",
+      "title": "OpenClaw",
+      "description": "FlowLab: explore OpenClaw for agentic tool use — build a small agent that uses tools to complete a multi-step task autonomously.",
+      "badgeName": "OpenClaw Explorer",
+      "badgeStatement": "I can build and run a multi-step agentic task with OpenClaw",
+      "difficulty": 2,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Globe",
+      "category": "Range",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/openclaw.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "openclaw"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.8,
+        "explorer": 0.4,
+        "completionist": 0.7,
+        "pragmatist": 0.5
+      },
+      "trackPrereqs": [],
+      "approval": "FlowLab"
+    },
+    {
+      "id": "whisperflow",
+      "title": "WhisperFlow",
+      "description": "FlowLab: set up a local speech-to-text pipeline with WhisperFlow — convert audio to structured text with an open-source AI model.",
+      "badgeName": "WhisperFlow",
+      "badgeStatement": "I can set up and run a local speech-to-text pipeline with WhisperFlow",
+      "difficulty": 2,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Globe",
+      "category": "Range",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/whisperflow.md",
+      "track": "ai-workbench",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "whisperflow"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.8,
+        "explorer": 0.4,
+        "completionist": 0.7,
+        "pragmatist": 0.6
+      },
+      "trackPrereqs": [],
+      "approval": "FlowLab"
+    },
+    {
+      "id": "deploy-vercel",
+      "title": "Deploy to Vercel",
+      "description": "Ship a frontend to Vercel in under 30 minutes — from git push to live URL with zero server management.",
+      "badgeName": "Vercel Deployer",
+      "badgeStatement": "I can ship a frontend project to a live Vercel URL in under 30 minutes",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "contentPath": "/content/ai-driven-experimentation/challenges/deploy-vercel.md",
+      "track": "hosting",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "vercel"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.7,
+        "explorer": 0.6,
+        "completionist": 0.8,
+        "pragmatist": 0.8
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "External"
+    },
+    {
+      "id": "deploy-aws",
+      "title": "Deploy to AWS",
+      "description": "Deploy a containerised prototype to AWS — package your app with Docker and run it on AWS infrastructure.",
+      "badgeName": "AWS Deployer",
+      "badgeStatement": "I can deploy a containerised prototype to AWS infrastructure",
+      "difficulty": 2,
+      "estimatedTime": "60 mins",
+      "requiredRank": 0,
+      "icon": "Route",
+      "category": "Leverage",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/deploy-aws.md",
+      "track": "hosting",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "aws"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.7,
+        "explorer": 0.5,
+        "completionist": 0.8,
+        "pragmatist": 0.7
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "deploy-gcp",
+      "title": "Deploy to GCP",
+      "description": "Deploy your prototype to Google Cloud Platform using Cloud Run — scalable, serverless container hosting on GCP infrastructure.",
+      "badgeName": "GCP Deployer",
+      "badgeStatement": "I can deploy a containerised prototype to GCP Cloud Run",
+      "difficulty": 2,
+      "estimatedTime": "60 mins",
+      "requiredRank": 0,
+      "icon": "Route",
+      "category": "Leverage",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/deploy-gcp.md",
+      "track": "hosting",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "gcp",
+        "firebase-hosting"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.7,
+        "explorer": 0.5,
+        "completionist": 0.8,
+        "pragmatist": 0.7
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "arise-eval",
+      "title": "Arize Evaluation",
+      "description": "Run a structured evaluation of an AI feature using Arize — instrument your system, capture traces, and analyse output quality with LLM evaluation metrics.",
+      "badgeName": "Arize Evaluator",
+      "badgeStatement": "I can run a structured AI evaluation with Arize and interpret the results to improve my system",
+      "difficulty": 2,
+      "estimatedTime": "60 mins",
+      "requiredRank": 0,
+      "icon": "TrendingUp",
+      "category": "Impact",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "contentPath": "/content/ai-driven-experimentation/challenges/arise-eval.md",
+      "track": "measurement",
+      "status": "live",
+      "estimatedMinutes": 60,
+      "toolTags": [
+        "arize"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.8,
+        "explorer": 0.4,
+        "completionist": 0.9,
+        "pragmatist": 0.5
+      },
+      "trackPrereqs": [
+        "hosting"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "mcp-atlassian",
+      "title": "MCP Atlassian",
+      "description": "Manage Jira and Confluence from your AI IDE via MCP — create tickets, update docs, and query project status without leaving your editor.",
+      "badgeName": "MCP Atlassian",
+      "badgeStatement": "I can manage Jira and Confluence from my AI IDE via MCP",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Workflow",
+      "category": "Leverage",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/mcp-atlassian.md",
+      "track": "productivity",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "mcp",
+        "mcp-atlassian"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.6,
+        "completionist": 0.8,
+        "pragmatist": 0.7
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "mcp-glean",
+      "title": "MCP Glean",
+      "description": "Connect and query Glean via MCP in your AI IDE — give your AI assistant real-time access to your company's knowledge base.",
+      "badgeName": "MCP Glean",
+      "badgeStatement": "I can connect Glean to my AI IDE via MCP and query enterprise knowledge in real time",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Workflow",
+      "category": "Leverage",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": true,
+      "contentPath": "/content/ai-driven-experimentation/challenges/mcp-glean.md",
+      "track": "productivity",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "mcp",
+        "mcp-glean"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.6,
+        "completionist": 0.8,
+        "pragmatist": 0.7
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "mcp-miro",
+      "title": "MCP Miro",
+      "description": "Read and write Miro boards from your AI IDE via MCP — let your AI assistant create diagrams, update boards, and surface insights directly.",
+      "badgeName": "MCP Miro",
+      "badgeStatement": "I can read and write Miro boards from my AI IDE via MCP",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Workflow",
+      "category": "Leverage",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/mcp-miro.md",
+      "track": "productivity",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "mcp",
+        "mcp-miro"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.6,
+        "completionist": 0.8,
+        "pragmatist": 0.7
+      },
+      "trackPrereqs": [
+        "ai-workbench"
+      ],
+      "approval": "REA Approved"
+    },
+    {
+      "id": "firebase-studio",
+      "title": "Firebase Studio",
+      "description": "Build and preview a prototype in Firebase Studio — Google's AI-powered full-stack development environment.",
+      "badgeName": "Firebase Studio",
+      "badgeStatement": "I can build and preview a working prototype in Firebase Studio",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/firebase-studio.md",
+      "track": "prototyping",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "firebase-studio"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.5,
+        "completionist": 0.8,
+        "pragmatist": 0.7
+      },
+      "trackPrereqs": [],
+      "approval": "REA Tolerated"
+    },
+    {
+      "id": "lovable-prototype",
+      "title": "Lovable Prototype",
+      "description": "Ship a working app from a prompt in 30 minutes using Lovable.dev — the fastest path from idea to deployed prototype.",
+      "badgeName": "Lovable Prototype",
+      "badgeStatement": "I can ship a working app from a prompt in under 30 minutes using Lovable.dev",
+      "difficulty": 1,
+      "estimatedTime": "30 mins",
+      "requiredRank": 0,
+      "icon": "Zap",
+      "category": "Velocity",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/lovable-prototype.md",
+      "track": "prototyping",
+      "status": "live",
+      "estimatedMinutes": 30,
+      "toolTags": [
+        "lovable"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.9,
+        "explorer": 0.7,
+        "completionist": 0.8,
+        "pragmatist": 0.8
+      },
+      "trackPrereqs": [],
+      "approval": "REA Tolerated"
+    },
+    {
+      "id": "replit-prototype",
+      "title": "Replit Prototype",
+      "description": "Build a full-stack prototype in the browser using Replit AI — zero local setup, instant deployment.",
+      "badgeName": "Replit Prototype",
+      "badgeStatement": "I can build and deploy a full-stack prototype in the browser with Replit AI",
+      "difficulty": 2,
+      "estimatedTime": "45 mins",
+      "requiredRank": 0,
+      "icon": "Globe",
+      "category": "Range",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/replit-prototype.md",
+      "track": "prototyping",
+      "status": "live",
+      "estimatedMinutes": 45,
+      "toolTags": [
+        "replit"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.7,
+        "explorer": 0.6,
+        "completionist": 0.7,
+        "pragmatist": 0.6
+      },
+      "trackPrereqs": [],
+      "approval": "External"
+    },
+    {
+      "id": "v0-components",
+      "title": "v0 Components",
+      "description": "Generate and iterate production-ready UI components using Vercel's v0 — from prompt to polished component in minutes.",
+      "badgeName": "v0 Components",
+      "badgeStatement": "I can generate and iterate production-ready UI components with Vercel v0",
+      "difficulty": 2,
+      "estimatedTime": "45 mins",
+      "requiredRank": 0,
+      "icon": "Globe",
+      "category": "Range",
+      "type": "challenge",
+      "module": "ai-driven-experimentation",
+      "isRequired": false,
+      "contentPath": "/content/ai-driven-experimentation/challenges/v0-components.md",
+      "track": "prototyping",
+      "status": "live",
+      "estimatedMinutes": 45,
+      "toolTags": [
+        "v0"
+      ],
+      "recommendedFor": {
+        "tool_specialist": 0.8,
+        "explorer": 0.5,
+        "completionist": 0.8,
+        "pragmatist": 0.6
+      },
+      "trackPrereqs": [],
+      "approval": "External"
+    }
+  ]
+}
