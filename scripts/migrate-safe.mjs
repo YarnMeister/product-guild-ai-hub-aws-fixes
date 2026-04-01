@@ -7,7 +7,7 @@
   - Concurrent deploy protection relies on Vercel's single-build guarantee
 */
 
-import { neon } from '@neondatabase/serverless';
+import postgres from 'postgres';
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { createHash } from 'crypto';
@@ -22,7 +22,7 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-const sql = neon(DATABASE_URL);
+const sql = postgres(DATABASE_URL);
 const MIGRATIONS_DIR = './drizzle/migrations';
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -74,20 +74,16 @@ async function runMigration(filename) {
     return;
   }
 
-  // Build all queries including the tracking insert
-  const queries = statements.map((stmt, i) => {
-    log(`  Queuing statement ${i + 1}/${statements.length}`);
-    return sql(stmt);
+  // Execute all statements + tracking insert atomically
+  await sql.begin(async (tx) => {
+    for (let i = 0; i < statements.length; i++) {
+      log(`  Executing statement ${i + 1}/${statements.length}`);
+      await tx.unsafe(statements[i]);
+    }
+    // Include migration tracking in the same transaction
+    await tx`INSERT INTO __app_migrations (name, hash) VALUES (${name}, ${hash})
+        ON CONFLICT (name) DO UPDATE SET hash = EXCLUDED.hash, executed_at = NOW()`;
   });
-
-  // Include migration tracking in the same transaction
-  queries.push(
-    sql`INSERT INTO __app_migrations (name, hash) VALUES (${name}, ${hash})
-        ON CONFLICT (name) DO UPDATE SET hash = EXCLUDED.hash, executed_at = NOW()`
-  );
-
-  // sql.transaction() sends ALL queries in a single HTTP request with real atomicity
-  await sql.transaction(queries);
   log(`  ✓ Transaction committed: ${name} (${statements.length} statements)`);
 }
 
@@ -124,6 +120,8 @@ async function main() {
   } else {
     log('\n✓ All migrations complete');
   }
+
+  await sql.end();
 }
 
 main().catch(err => {

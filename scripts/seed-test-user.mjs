@@ -7,7 +7,7 @@
   - Password read from process.env.TEST_USER
 */
 
-import { neon } from '@neondatabase/serverless';
+import postgres from 'postgres';
 import bcrypt from 'bcryptjs';
 import dotenv from 'dotenv';
 
@@ -39,7 +39,7 @@ if (!TEST_PASSWORD) {
   process.exit(1);
 }
 
-const sql = neon(DATABASE_URL);
+const sql = postgres(DATABASE_URL);
 
 function log(message) {
   const timestamp = new Date().toISOString();
@@ -204,8 +204,11 @@ async function main() {
     log('  Rank 2+: Locked (no Rank 1 requirements completed)');
   } catch (err) {
     console.error('❌ Seed failed:', err);
+    await sql.end();
     process.exit(1);
   }
+
+  await sql.end();
 }
 
 main();

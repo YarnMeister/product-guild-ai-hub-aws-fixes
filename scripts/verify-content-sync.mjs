@@ -5,7 +5,7 @@
   - Checks counts and required items
 */
 
-import { neon } from '@neondatabase/serverless';
+import postgres from 'postgres';
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '.env.local' });
@@ -16,7 +16,7 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-const sql = neon(DATABASE_URL);
+const sql = postgres(DATABASE_URL);
 
 async function main() {
   console.log('🔍 Verifying content sync...\n');
@@ -71,8 +71,11 @@ async function main() {
   if (allPassed) {
     console.log('\n✅ All checks passed!');
   } else {
+    await sql.end();
     process.exit(1);
   }
+
+  await sql.end();
 }
 
 main().catch(err => {

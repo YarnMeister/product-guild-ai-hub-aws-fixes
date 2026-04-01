@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { neon } from '@neondatabase/serverless';
+import postgres from 'postgres';
 import dotenv from 'dotenv';
 
 // Load environment variables from .env.local
@@ -12,7 +12,7 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-const sql = neon(DATABASE_URL);
+const sql = postgres(DATABASE_URL);
 
 async function checkData() {
   try {
@@ -29,8 +29,11 @@ async function checkData() {
     challenges.forEach(c => {
       console.log(`  ${c.id}: ${c.title} (is_required: ${c.is_required})`);
     });
+
+    await sql.end();
   } catch (error) {
     console.error('Error:', error);
+    await sql.end();
     process.exit(1);
   }
 }

@@ -7,7 +7,7 @@
   - Run after migrations in build process
 */
 
-import { neon } from '@neondatabase/serverless';
+import postgres from 'postgres';
 import { readFileSync } from 'fs';
 import dotenv from 'dotenv';
 
@@ -20,7 +20,7 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-const sql = neon(DATABASE_URL);
+const sql = postgres(DATABASE_URL);
 
 function log(message) {
   const timestamp = new Date().toISOString();
@@ -162,6 +162,8 @@ async function main() {
   await syncChallenges(contentIndex.challenges);
   
   log('\n✅ Content sync complete!');
+
+  await sql.end();
 }
 
 main().catch(err => {

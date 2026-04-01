@@ -1,5 +1,5 @@
-import { neon } from '@neondatabase/serverless';
-import { drizzle } from 'drizzle-orm/neon-http';
+import postgres from 'postgres';
+import { drizzle } from 'drizzle-orm/postgres-js';
 import * as schema from './schema';
 
 // Lazy-initialize the database connection to avoid top-level throws that
@@ -12,8 +12,8 @@ function getDb() {
     if (!url) {
       throw new Error('DATABASE_URL is not set');
     }
-    const sql = neon(url);
-    _db = drizzle(sql, { schema });
+    const client = postgres(url);
+    _db = drizzle(client, { schema });
   }
   return _db;
 }
