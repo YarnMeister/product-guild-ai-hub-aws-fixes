@@ -15,6 +15,7 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/_api ./_api
 COPY --from=builder /app/src/db ./src/db
 COPY --from=builder /app/src/lib ./src/lib
+COPY --from=builder /app/src/data ./src/data
 COPY --from=builder /app/scripts ./scripts
 COPY --from=builder /app/drizzle ./drizzle
 COPY --from=builder /app/public/content ./public/content
