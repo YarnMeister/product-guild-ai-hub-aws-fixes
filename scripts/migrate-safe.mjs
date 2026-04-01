@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /*
   BULLETPROOF MIGRATION RUNNER
-  - Uses sql.transaction() for true atomic migrations
+  - Uses sql.begin() for true atomic migrations (postgres-js API)
   - Verifies success BEFORE marking complete
   - Uses SHA-256 content hashing
-  - Concurrent deploy protection relies on Vercel's single-build guarantee
+  - Idempotent: safe to re-run; already-applied migrations are skipped
 */
 
 import postgres from 'postgres';
@@ -92,8 +92,8 @@ async function main() {
     log('🔍 DRY RUN MODE - No changes will be made');
   }
 
-  // Note: Advisory locks don't work with Neon's HTTP driver (session-scoped).
-  // Concurrent deploy protection relies on Vercel's single-build guarantee.
+  // Note: For concurrent deploy protection, wrap this in an advisory lock or
+  // rely on the deployment orchestrator (ECS task, CI) to serialise runs.
 
   await getMigrationTable();
 
