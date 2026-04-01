@@ -26,7 +26,7 @@ app.use(express.static(join(rootDir, 'dist')));
 app.use(express.static(join(rootDir, 'public')));
 
 // Dynamic API route handler
-app.all('/api/*', async (req, res) => {
+app.all('/api/*path', async (req, res) => {
   try {
     // Extract the API path (e.g., /api/auth/login -> auth/login)
     const apiPath = req.path.replace('/api/', '');
@@ -105,7 +105,7 @@ app.get('/health', (req, res) => {
 });
 
 // SPA fallback - MUST be last, after API routes
-app.get('*', (req, res) => {
+app.get('*path', (req, res) => {
   res.sendFile(join(rootDir, 'dist', 'index.html'));
 });
 
