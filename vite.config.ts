@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-import vercel from "vite-plugin-vercel";
 import { exec } from "child_process";
 import { promisify } from "util";
 
@@ -51,7 +50,6 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    vercel(),
     mode === "development" && componentTagger(),
     mode === "development" && contentIndexWatcher(),
   ].filter(Boolean),
@@ -60,13 +58,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  vercel: {
-    // Rewrite all non-API routes to index.html for SPA routing
-    rewrites: [
-      {
-        source: "/((?!api|_api).*)",
-        destination: "/index.html"
-      }
-    ]
-  }
 }));

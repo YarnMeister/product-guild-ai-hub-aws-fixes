@@ -15,7 +15,6 @@ import ChallengePlayer from "./pages/ChallengePlayer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
-import { Analytics } from "@vercel/analytics/react";
 import { lazy, Suspense } from "react";
 
 const ContentStudio = lazy(() => import("./pages/ContentStudio"));
@@ -86,7 +85,6 @@ const App = () => (
             </Routes>
         </AuthProvider>
       </BrowserRouter>
-      <Analytics />
     </TooltipProvider>
   </QueryClientProvider>
 );

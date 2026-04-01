@@ -1,4 +1,4 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from '../_types';
 import { db } from '../../src/db';
 import { users } from '../../src/db/schema';
 import { verifyPassword, createToken } from '../../src/lib/auth';

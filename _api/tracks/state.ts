@@ -1,4 +1,4 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { VercelRequest, VercelResponse } from '../_types';
 import { db } from '../../src/db';
 import { userLessonProgress, userBadges, challenges, lessons, trackProgress } from '../../src/db/schema';
 import { verifyToken, getTokenFromHeader } from '../../src/lib/auth';
