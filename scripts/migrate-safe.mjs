@@ -92,36 +92,35 @@ async function main() {
     log('🔍 DRY RUN MODE - No changes will be made');
   }
 
-  // Note: For concurrent deploy protection, wrap this in an advisory lock or
-  // rely on the deployment orchestrator (ECS task, CI) to serialise runs.
+  try {
+    await getMigrationTable();
 
-  await getMigrationTable();
+    const executed = await getExecutedMigrations();
+    const files = readdirSync(MIGRATIONS_DIR)
+      .filter(f => f.endsWith('.sql'))
+      .sort();
 
-  const executed = await getExecutedMigrations();
-  const files = readdirSync(MIGRATIONS_DIR)
-    .filter(f => f.endsWith('.sql'))
-    .sort();
+    const pending = files.filter(f => !executed.has(f.replace('.sql', '')));
 
-  const pending = files.filter(f => !executed.has(f.replace('.sql', '')));
+    if (pending.length === 0) {
+      log('✓ All migrations up to date');
+      return;
+    }
 
-  if (pending.length === 0) {
-    log('✓ All migrations up to date');
-    return; // Exit naturally with code 0
+    log('Found ' + pending.length + ' pending migration(s)');
+
+    for (const file of pending) {
+      await runMigration(file);
+    }
+
+    if (DRY_RUN) {
+      log('\n✓ Dry run complete - no changes made');
+    } else {
+      log('\n✓ All migrations complete');
+    }
+  } finally {
+    await sql.end();
   }
-
-  log(`Found ${pending.length} pending migration(s)`);
-
-  for (const file of pending) {
-    await runMigration(file);
-  }
-
-  if (DRY_RUN) {
-    log('\n✓ Dry run complete - no changes made');
-  } else {
-    log('\n✓ All migrations complete');
-  }
-
-  await sql.end();
 }
 
 main().catch(err => {
