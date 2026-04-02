@@ -22,7 +22,6 @@ services:
     environment:
       DATABASE_URL: postgresql://aihub:localdev@db:5432/aihub
       JWT_SECRET: docker-dev-secret-change-in-production
-      NODE_ENV: production
     depends_on:
       db:
         condition: service_healthy

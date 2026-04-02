@@ -4,10 +4,9 @@ import { dirname, join } from 'path';
 import { existsSync } from 'fs';
 import dotenv from 'dotenv';
 
-// Only load .env.local in non-production (Docker provides real env vars)
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config({ path: '.env.local' });
-}
+// dotenv does not override env vars already set in the environment (e.g. ECS task definition)
+// Safe to call unconditionally — no-op if .env.local does not exist
+dotenv.config({ path: '.env.local' });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
